@@ -1,0 +1,111 @@
+/* \$visual-grid: true;
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #233067;
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+  max-width: 100%; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.block {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .block:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 501px) and (max-width: 840px) {
+    .block {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .block:last-child {
+        margin-right: 0; }
+      .block .label {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .block .label:last-child {
+          margin-right: 0; } }
+  @media screen and (max-width: 500px) {
+    .block {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .block:last-child {
+        margin-right: 0; } }
+  .block input {
+    border: solid 4px red;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    background-color: #233067; }
+    .block input:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 501px) and (max-width: 840px) {
+      .block input {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .block input:last-child {
+          margin-right: 0; } }
+  .block .question {
+    display: inline-block;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    clear: both; }
+    .block .question:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 501px) and (max-width: 840px) {
+      .block .question {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .block .question:last-child {
+          margin-right: 0; } }
+  .block .query {
+    display: inline-block;
+    width: 100%;
+    clear: both; }
+  .block textarea {
+    border: solid 4px red;
+    background-color: #233067;
+    width: 100%;
+    height: 100px; }
+    @media screen and (min-width: 501px) and (max-width: 840px) {
+      .block textarea {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .block textarea:last-child {
+          margin-right: 0; } }
+  .block .block {
+    margin-right: auto;
+    margin-left: auto; }
+
+/*# sourceMappingURL=main.css.map */

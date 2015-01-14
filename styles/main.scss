@@ -1,0 +1,77 @@
+@import 'bourbon/bourbon';
+/* \$visual-grid: true;
+ */
+@import 'neat/neat';
+$tablet: new-breakpoint(min-width 501px max-width 840px);
+$mobile: new-breakpoint(max-width 500px);
+$mystic: white;
+$biscay: #233067;
+
+$image-width: 100%;
+$image-height: 100%;
+
+.container {
+  @include outer-container;
+  background-color: $biscay;
+  color: $mystic;
+  font-family: "Lucida Console", Monaco, monospace;
+  max-width: 100%;
+}
+.block {
+  @include span-columns (4);
+
+  @include media($tablet) {
+    @include span-columns(12);
+
+    .label {
+      @include span-columns(6);
+    }
+
+  }
+
+  @include media($mobile) {
+    @include span-columns(12)
+  }
+
+  input {
+    border: solid 4px red;
+    @include span-columns(12);
+    background-color: $biscay;
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+
+  }
+  .question {
+    display: inline-block;
+    @include span-columns(4);
+    clear: both;
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+
+  }
+  .query {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+
+  }
+  textarea {
+    border: solid 4px red;
+    background-color: $biscay;
+    width: 100%;
+    height: 100px;
+
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+
+  }
+  .block {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
