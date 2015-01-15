@@ -6,72 +6,101 @@ $tablet: new-breakpoint(min-width 501px max-width 840px);
 $mobile: new-breakpoint(max-width 500px);
 $mystic: white;
 $biscay: #233067;
+$teal: #017e83;
 
 $image-width: 100%;
 $image-height: 100%;
 
+body {
+  background-color: $biscay;
+  font-size: 18px;
+}
+
 .container {
   @include outer-container;
-  background-color: $biscay;
   color: $mystic;
-  font-family: "Lucida Console", Monaco, monospace;
-  max-width: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+
+  @include media($tablet) {
+    max-width: 700px;
+  }
 }
+
+.label {
+  @include media($tablet) {
+    @include span-columns(6);
+  }
+}
+
 .block {
   @include span-columns (4);
 
   @include media($tablet) {
     @include span-columns(12);
-
-    .label {
-      @include span-columns(6);
-    }
-
   }
 
   @include media($mobile) {
     @include span-columns(12)
   }
 
-  input {
-    border: solid 4px red;
-    @include span-columns(12);
-    background-color: $biscay;
-
-    @include media($tablet) {
-      @include span-columns(4);
-    }
-
-  }
-  .question {
-    display: inline-block;
-    @include span-columns(4);
-    clear: both;
-
-    @include media($tablet) {
-      @include span-columns(4);
-    }
-
-  }
-  .query {
-    display: inline-block;
-    width: 100%;
-    clear: both;
-
-  }
+  input,
   textarea {
-    border: solid 4px red;
+    border: solid 2px $teal;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px $teal;
+    @include span-columns(4 of 4);
     background-color: $biscay;
-    width: 100%;
-    height: 100px;
 
     @include media($tablet) {
-      @include span-columns(6);
+      @include span-columns(9 of 12);
     }
 
   }
-  .block {
+
+  textarea {
+    height: 100px;
+  }
+
+  .question {
+    /* display: inline-block; */
+    @include span-columns(4 of 4);
+    /* clear: both; */
+
+    @include media($tablet) {
+      @include span-columns(3 of 12);
+    }
+
+  }
+
+  .query {
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+    }
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* clear: both; */
+  }
+
+  /* .block {
     margin-right: auto;
     margin-left: auto;
+  } */
+
+  textarea {
+    color: #8f8f8f;
+    font-size: 15px;
+  }
+  input {
+    color: #8f8f8f;
+    font-size: 15px;
+  }
+}
+
+.bio .question,
+.affiliations .question,
+.comments .question {
+  @include media($tablet) {
+    margin-top: 30px;
   }
 }
