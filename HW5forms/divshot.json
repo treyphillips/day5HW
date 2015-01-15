@@ -1,0 +1,6 @@
+{
+  "name": "HW5forms",
+  "root": "public",
+  "clean_urls": true,
+  "error_page": "error.html"
+}

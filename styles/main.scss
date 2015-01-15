@@ -46,8 +46,10 @@ body {
     @include span-columns(12)
   }
 
+
   input,
-  textarea {
+  textarea,
+  select {
     border: solid 2px $teal;
     border-radius: 7px;
     box-shadow: 0 0 px $teal;
@@ -62,14 +64,8 @@ body {
   }
 
   select {
-    border: solid 2px $teal;
-    border-radius: 7px;
-    box-shadow: 0 0 px $teal;
-    @include span-columns(4 of 4);
-    background-color: $biscay;
     font-size: 20px;
     color: $teal;
-
   }
 
   textarea {
@@ -94,11 +90,6 @@ body {
 
     }
 
-    select {
-      @include media($tablet) {
-        @include span-columns(12 of 12);
-      }
-    }
   }
 
   input {
@@ -106,23 +97,29 @@ body {
     font-size: 20px;
   }
 
+
   textarea,
   input:focus {
     color: $teal;
     }
 
-  .dropper {
-    display: inline-block;
-    width: 100%;
+/*   .dropper {
+  display: inline-block;
+  width: 100%;
+  color: \$teal;
+  }
+ */
+    .question {
+      font-weight: bolder;
+    }
+
+
+  ::-webkit-input-placeholder {
     color: $teal;
     }
 
-  ::-webkit-input-placeholder {
-      color:    $teal;
-    }
-
   :-moz-placeholder {
-    color:    $teal;
+    color: $teal;
     }
 
   ::-moz-placeholder {
@@ -130,7 +127,7 @@ body {
   }
 
   :-ms-input-placeholder {
-    color:    $teal;
+    color: $teal;
     }
 
 
