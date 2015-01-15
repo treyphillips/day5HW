@@ -12,7 +12,7 @@ html {
 
 body {
   background-color: #233067;
-  font-size: 18px; }
+  font-size: 22px; }
 
 .container {
   max-width: 68em;
@@ -42,11 +42,7 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  /* .block {
-    margin-right: auto;
-    margin-left: auto;
-  } */ }
+  width: 31.76157%; }
   .block:last-child {
     margin-right: 0; }
   @media screen and (min-width: 501px) and (max-width: 840px) {
@@ -69,7 +65,7 @@ body {
   .block textarea {
     border: solid 2px #017e83;
     border-radius: 7px;
-    box-shadow: 0px 0px 5px #017e83;
+    box-shadow: 0 0 px #017e83;
     float: left;
     display: block;
     margin-right: 7.42297%;
@@ -88,8 +84,21 @@ body {
         .block input:last-child,
         .block textarea:last-child {
           margin-right: 0; } }
+  .block select {
+    border: solid 2px #017e83;
+    border-radius: 7px;
+    box-shadow: 0 0 px #017e83;
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    background-color: #233067; }
+    .block select:last-child {
+      margin-right: 0; }
   .block textarea {
-    height: 100px; }
+    height: 100px;
+    color: #8f8f8f;
+    font-size: 20px; }
   .block .question {
     /* display: inline-block; */
     float: left;
@@ -107,24 +116,30 @@ body {
         width: 23.23176%; }
         .block .question:last-child {
           margin-right: 0; } }
-  .block .query {
-    /* display: inline-block; */
-    /* width: 100%; */
-    /* clear: both; */ }
-    @media screen and (min-width: 501px) and (max-width: 840px) {
-      .block .query {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%; }
-        .block .query:last-child {
-          margin-right: 0; } }
-  .block textarea {
-    color: #8f8f8f;
-    font-size: 15px; }
+  @media screen and (min-width: 501px) and (max-width: 840px) {
+    .block .query {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .block .query:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 501px) and (max-width: 840px) {
+    .block .query .dropper {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .block .query .dropper:last-child {
+        margin-right: 0; } }
   .block input {
     color: #8f8f8f;
-    font-size: 15px; }
+    font-size: 20px; }
+  .block input:focus {
+    color: #De2a00; }
+  .block .dropper {
+    font-color: #017e83;
+    display: inline-block; }
 
 @media screen and (min-width: 501px) and (max-width: 840px) {
   .bio .question,

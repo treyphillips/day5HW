@@ -13,9 +13,9 @@ $image-height: 100%;
 
 body {
   background-color: $biscay;
-  font-size: 18px;
-}
+  font-size: 22px;
 
+}
 .container {
   @include outer-container;
   color: $mystic;
@@ -25,30 +25,29 @@ body {
   @include media($tablet) {
     max-width: 700px;
   }
-}
 
+}
 .label {
   @include media($tablet) {
     @include span-columns(6);
   }
-}
 
+}
 .block {
   @include span-columns (4);
 
   @include media($tablet) {
     @include span-columns(12);
-  }
 
+  }
   @include media($mobile) {
     @include span-columns(12)
   }
-
   input,
   textarea {
     border: solid 2px $teal;
     border-radius: 7px;
-    box-shadow: 0px 0px 5px $teal;
+    box-shadow: 0 0 px $teal;
     @include span-columns(4 of 4);
     background-color: $biscay;
 
@@ -57,11 +56,19 @@ body {
     }
 
   }
+  select {
+    border: solid 2px $teal;
+    border-radius: 7px;
+    box-shadow: 0 0 px $teal;
+    @include span-columns(4 of 4);
+    background-color: $biscay;
 
+  }
   textarea {
     height: 100px;
+    color: #8f8f8f;
+    font-size: 20px;
   }
-
   .question {
     /* display: inline-block; */
     @include span-columns(4 of 4);
@@ -76,31 +83,36 @@ body {
   .query {
     @include media($tablet) {
       @include span-columns(12 of 12);
+
     }
-    /* display: inline-block; */
-    /* width: 100%; */
-    /* clear: both; */
+
+    .dropper {
+      @include media($tablet) {
+        @include span-columns(12 of 12);
+      }
+    }
   }
 
-  /* .block {
-    margin-right: auto;
-    margin-left: auto;
-  } */
-
-  textarea {
-    color: #8f8f8f;
-    font-size: 15px;
-  }
   input {
     color: #8f8f8f;
-    font-size: 15px;
+    font-size: 20px;
   }
-}
 
+  input:focus {
+    color: #De2a00;
+    }
+
+  .dropper {
+    font-color: $teal;
+    display: inline-block;
+    }
+}
 .bio .question,
 .affiliations .question,
 .comments .question {
   @include media($tablet) {
     margin-top: 30px;
   }
+
+
 }
